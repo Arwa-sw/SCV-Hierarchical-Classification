@@ -1,0 +1,10 @@
+import"A.sol";
+contract ExtContract{
+A inst;
+ constructor(A _inst){
+        inst = _inst;
+}
+function B(string x){
+// potentially do some operations here
+        inst.extrFun (x);
+}

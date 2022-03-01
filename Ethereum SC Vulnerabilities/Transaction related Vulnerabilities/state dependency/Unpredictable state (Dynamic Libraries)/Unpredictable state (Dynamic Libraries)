@@ -1,0 +1,29 @@
+contract A{
+address Aadd;
+address owner;
+function setA() {
+owner = msg.sender;}
+function getlib(addresss x){
+if (msg.sender = owner)
+Aadd = x; }
+Function getSet() returns (address) {
+Return Aadd;
+} }
+Library Set {
+Struct Data {mapping (uint=>bool) flags; }
+Function insert (Data storage self, uint value)
+returns (bool) {
+Self.flags(value) = true;
+Return true;}
+Function version ()  returns (uint) {
+Return 1;}
+}
+Contract B {
+A public a;
+Function B (address y) {
+y = setA (add); }
+function getSetVer () returns (uint){
+address  setAdd = a.getSet();
+return Set (setadd).version();}
+}
+

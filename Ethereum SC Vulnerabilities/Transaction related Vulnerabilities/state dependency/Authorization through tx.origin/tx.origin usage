@@ -1,0 +1,8 @@
+Sample code:
+pragma solidity >=0.5.0 <0.7.0;
+contract TxUserWallet {    
+  address owner;
+    constructor() public {  owner = msg.sender;    }
+function transferTo(address payable target, uint amount) public {  
+ require(tx.origin == owner);        
+target.transfer(amount);   } }

@@ -1,0 +1,17 @@
+- hard coded addresses: Since we cannot modify smart contracts after deploying them, hard coded addresses can lead to vulnerabilities.
+Sample code: In the example Code28a the function transfer has two argument addr and tokens, if we wnt to transfer 1000 tokens to address 0xab0but by mistake we write the value of addr is 0xab which will be added 0 by EVM auto , the encoding will be ab0010000 instead of ab0001000, which leads to an increase in the transfer tokens.
+pragma solidity ^0.5.0;
+contract invalidAddExp {
+function hardAddr () {address owner=0xdG…C3AdlD;}
+function transfer are (address addr, uint tokens) {public returns (bool succ)}
+}
+Its danger: Leaking Ether to arbitrary address (multi-player game) , Freezing Ether (Parity multi signature wallet attack) [1)if the addres of the mothed invoked on not contract, call return without error(if mistype the address, the ether will lost), 2)if the address is of contract and the function signature exactly match the function in the target contract, the function will invoke successfully, 3)if the address is of contract, but there is a typo in required function name, the function fallback() will invoke]
+Solution: can be mitigated by the developer adapting proper authorization logic in code to ensure that only the intended recipients are able to withdraw Ether
+Throw if msg.data has invalid size/
+Exchanges must perform input validation
+Never outsource critical function to other contracts
+Check the address before transferring 
+Assure the correctness of the recipient address/ Use the withdraw pattern
+Removing the hard coded addresses and inputting the addresses as function parameters.
+Tools can detect:  Slither/ Securify
+

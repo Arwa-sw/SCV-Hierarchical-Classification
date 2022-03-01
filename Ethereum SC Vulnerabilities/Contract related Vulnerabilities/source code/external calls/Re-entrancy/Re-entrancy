@@ -1,0 +1,20 @@
+Sample code:
+import "./TokenCreation.sol";
+pragma solidity ^0.4.4;
+contract DAOInterface {
+//…
+function withdraw() onlyTokenholders returns (bool _success) {
+        unVoteAll();
+        // Move ether
+        uint senderBalance = balances[msg.sender];
+        // TODO this is flawed
+        uint fundsToBeMoved = (senderBalance * actualBalance()) / totalSupply;
+        msg.sender.send(fundsToBeMoved);
+        balances[msg.sender] = 0;  
+        // Burn DAO Tokens
+        totalSupply -= senderBalance;
+        // event for light client notification
+        Transfer(msg.sender, 0, senderBalance);
+        return true;
+}
+//…

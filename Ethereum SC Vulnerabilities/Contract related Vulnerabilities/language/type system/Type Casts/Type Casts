@@ -1,0 +1,26 @@
+a:  contract Typecasttest_1{
+function sub(uint a)
+public return (uint) { 
+//….. } }
+contract Typecasttest_2 {
+function sub(uint b)
+public return (uint) { 
+//….. } }
+contract wallet {
+function transfer (Typecasttest_1 t)  public {
+t.add(1); }
+}
+b: contract Storage {
+    uint n;
+    string s;
+    address a;
+    uint8 number;
+    function store(uint256 num) public {
+        number = num;
+    }
+  function test() public view {
+        bytes32 b1 = bytes32(n);
+        bytes32 b2 = bytes32(a);
+        bytes32 b4 = bytes32("string");
+        bytes memory b5 = bytes(s);
+    } }

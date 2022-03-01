@@ -1,0 +1,8 @@
+contract ContExp{
+    address private owner;
+    function contExp ()
+        public 
+    {
+        owner = msg.sender;
+    }
+}

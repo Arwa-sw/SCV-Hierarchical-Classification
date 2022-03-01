@@ -1,0 +1,5 @@
+contract exp{
+function f1(uint x){
+require(msg.value >0);
+x+=msg.value;
+} }
