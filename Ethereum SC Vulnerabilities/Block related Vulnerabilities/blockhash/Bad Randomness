@@ -1,4 +1,4 @@
-uint256 private seed;
+ ## uint256 private seed;
 function guess() public payable {
 	require(msg.value >= 2 ether);
 	iteration++;
