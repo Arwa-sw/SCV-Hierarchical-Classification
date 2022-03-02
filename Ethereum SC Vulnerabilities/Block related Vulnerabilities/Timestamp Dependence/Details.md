@@ -4,7 +4,7 @@ H2{color:DarkOrange !important;}
 p{color:Black !important;}
 </style>
 # Timestamp Dependence
-**which loads to a  time constraint:**
+**which loads to a time constraint:**
 ## Describe:
  It happens when the developer uses the block-timestamp or its alias now either 
  directly or indirectly to trigger conditions or as a source of randomness 
