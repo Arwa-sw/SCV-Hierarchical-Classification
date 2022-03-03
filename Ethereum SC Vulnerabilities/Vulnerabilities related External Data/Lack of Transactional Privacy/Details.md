@@ -1,5 +1,12 @@
-72.	Untrustworthy External Data Feeds (Oracles) (Lack of Trusted Data Feeds (Oracles)/Lack of trustworthy / Off-chain Safety 
-Describe: Oracles are external sources of information (from services outside the blockchain), either from software (Big-data applications) or hardware (Internet-of-Things) that feed smart contracts and serve requests by other contracts to source data from outside the blockchain, such as from websites (e.g., websites). However, these data feeds which are brought to the blockchain also bring risk and it is hard to guarantee the trustworthiness of their sources. Which make it worse that there is a lack of a standard method in handling external data feed.
+Untrustworthy External Data Feeds (Oracles) (Lack of Trusted Data Feeds (Oracles)/Lack of trustworthy / Off-chain Safety 
+
+Describe: 
+Oracles are external sources of information (from services outside the blockchain), either from software (Big-data 
+applications) or hardware (Internet-of-Things) that feed smart contracts and serve requests by other contracts to 
+source data from outside the blockchain, such as from websites (e.g., websites). However, these data feeds which 
+are brought to the blockchain also bring risk and it is hard to guarantee the trustworthiness of their sources. 
+Which make it worse that there is a lack of a standard method in handling external data feed.
+
 Sample code:
 pragma solidity ^0.6.7;
 3import "@chainlink/contracts/src/v0.6/interfaces/AggregatorV3Interface.sol";

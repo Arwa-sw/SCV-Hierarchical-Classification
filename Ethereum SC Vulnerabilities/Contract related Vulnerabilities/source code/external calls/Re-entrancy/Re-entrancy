@@ -1,4 +1,4 @@
-Sample code:
+
 import "./TokenCreation.sol";
 pragma solidity ^0.4.4;
 contract DAOInterface {
