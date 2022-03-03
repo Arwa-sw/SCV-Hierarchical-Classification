@@ -50,8 +50,10 @@ vulnerability by using the variables
  determine if the caller wins. Even though the seed is private, it must  
  have been set via a transaction at 
  some point in time and thus is visible on the blockchain.
-source: old_blockhash.sol
+
+**source:** old_blockhash.sol
 https://swcregistry.io/docs/SWC-120
+
 ## Its danger:
  In the Fomo3D attack, it is 
  real-world smart contracts that are attacked using this vulnerability. A 

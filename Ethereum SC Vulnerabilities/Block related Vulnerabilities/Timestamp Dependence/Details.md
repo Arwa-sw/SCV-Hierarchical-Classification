@@ -1,5 +1,5 @@
 <style>
-H1{color:white !important;}
+H1{color:Black !important;}
 H2{color:DarkOrange !important;}
 p{color:Black !important;}
 </style>
@@ -12,8 +12,9 @@ p{color:Black !important;}
  timestamps is that they must be greater than the previous. In the code_a code, we 
  can see that the miners can manipulate "now" to always win and gain money. Also, 
  in the code_b, the developer uses the timestamp variable to generate a random number.
-<Bitmap guid="testIcon" href="Resources\<icon file name>" usedList="f637">
-**source:** https://immunebytes.com/time-dependency-in-smart-contracts/
+
+**source:**  https://immunebytes.com/time-dependency-in-smart-contracts/
+
 ## Its danger:
  It can be misused by miners to manipulate the timestamp to gain unfair output 
  benefits (e.g., transferring the money to themselves). The GovernMental and the Run 
@@ -30,6 +31,7 @@ Ethir, Slither, ContractFuzzer, and Zeus) can detect this vulnerability. Regardl
 of the different ways of analyzing the smart contract in the analysis tools, they 
 detect this vulnerability by looking for the timestamp variable used within critical 
 operations such as the send function.
+
 ## Tools can detect it:
  Most of the analysis tools (Oyente, Remix, SmartCheck, Mythril, Ethir, Slither, ContractFuzzer, and Zeus) can 
  detect this vulnerability. Regardless of the different ways of analyzing the smart contract in the analysis tools, they 
