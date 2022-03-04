@@ -1,0 +1,4 @@
+uint winner ID = u i n t ( block.blockhash  block.number )) % participants.length ;
+      participants[winnerID].send(8ether) ;
+      participatorID=0;
+   }

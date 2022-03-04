@@ -1,4 +1,6 @@
- ## uint256 private seed;
+1.	
+Sample code:
+uint256 private seed;
 function guess() public payable {
 	require(msg.value >= 2 ether);
 	iteration++;
@@ -14,10 +16,10 @@ require(block.number > guesses[msg.sender].block);
             msg.sender.transfer(2 ether);
         }
     }
-source: old_blockhash.sol
-https://swcregistry.io/docs/SWC-120
-function betOf(address _who) constant external returns (uint) 
- {
+
+//source: old_blockhash.sol https://swcregistry.io/docs/SWC-120
+
+function betOf(address _who) constant external returns (uint)  {
         Bet memory player = bets[_who];
         if( (player.value==0) ||
             (player.blockNum<=1) ||
@@ -36,3 +38,5 @@ function betOf(address _who) constant external returns (uint)
             else{
                 return(betPrize(player,uint24(hash)));
             } 	}
+
+//source: SmartBillions Lottery https://etherscan.io/address/0x5ace17f87c7391e5792a7683069a8025b83bbd85
