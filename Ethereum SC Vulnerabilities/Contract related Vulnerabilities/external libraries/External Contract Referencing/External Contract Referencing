@@ -1,3 +1,4 @@
+Sample code: code12a shows Inst address which isnot public or constant, so deployer of the contract could give an address in the constructor that points to another contract:
 import"A.sol";
 contract ExtContract{
 A inst;

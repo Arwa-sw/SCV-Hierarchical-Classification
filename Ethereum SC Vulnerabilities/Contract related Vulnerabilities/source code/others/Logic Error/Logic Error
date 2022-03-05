@@ -1,0 +1,4 @@
+    function withdraw() public {
+        require(msg.value < amount);
+        msg.sender.send(amount);
+    } 

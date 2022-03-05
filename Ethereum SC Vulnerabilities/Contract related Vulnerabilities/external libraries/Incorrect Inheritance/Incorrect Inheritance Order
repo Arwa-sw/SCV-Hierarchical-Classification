@@ -1,0 +1,15 @@
+interface A {
+    function inhert() external returns(uint); }
+contract B1 {
+    function f () external returns(bool){
+        return true;
+    } }
+contract B2 {
+    function f () external returns(bool){
+        return false;
+    } }
+contract C is B1, B2 {
+    function inhert () external returns(uint){
+        return 42;
+}
+f(); }

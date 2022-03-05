@@ -1,0 +1,4 @@
+Sample code: Code27a, which happens to be a valid operator instead of calculating the sum it initializes the variable again.
+function typo() public {
+        x =+ 1;
+}

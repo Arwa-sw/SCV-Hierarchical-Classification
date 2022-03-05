@@ -1,0 +1,14 @@
+Sample code:
+contract GaslessExp {
+uint256 a;
+address x;
+function() public payable { 
+x = msg.sender; }
+function() public payable {
+if (msg.data.length != 0 && msg.value == 0) {
+// some type of call; waste the gas
+a = a + 1;
+} else {
+// incoming payment; use gas wisely
+}  }  }
+The sample contract consumes over 20,000 gas, because of changing the contract storage on the blockchain.

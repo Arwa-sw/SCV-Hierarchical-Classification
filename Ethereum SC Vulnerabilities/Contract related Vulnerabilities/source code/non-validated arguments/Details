@@ -1,4 +1,0 @@
-Describe: The arguments in a function are the parameters passed during an invocation of a method or a transaction. The arguments are used in the method for several operations and computations as the required logic. These method arguments should be checked and validated before passing to the method call since the unchecked arguments may cause malicious actions during the execution of the method.
-Its danger: integer over/under flow attack
-Solution: should be validated and handle the errors
-Tools can detect: Securify

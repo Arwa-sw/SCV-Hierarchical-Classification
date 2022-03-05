@@ -26,11 +26,14 @@ The vulnerabilities in this domain are the result of using variables such as tim
 
  There are two known vulnerabilities caused by using these variables:
 
+
+
  <ul>
 <li>Timestamp Dependence</li>
-      
-<li>Blockhash</li>
-    <ul>
+    </li>
+   
+   <li> Blockhash</li>
+     <ul>
      <li>Bad Randomness (Entropy Illusion)</li>
     </ul>
   </ul>

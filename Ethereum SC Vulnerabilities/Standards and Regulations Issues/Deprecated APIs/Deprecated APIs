@@ -1,3 +1,4 @@
+Sample code:
 contract ContractWithDeprecatedReferences {
     // Deprecated: Change block.blockhash() -> blockhash()
     bytes32 globalBlockHash = block.blockhash(0);
@@ -20,3 +21,4 @@ contract ContractWithDeprecatedReferences {
         suicide(address(0));
     }
 }
+Sorce: https://github.com/crytic/slither/wiki/Detector-Documentation#deprecated-standards

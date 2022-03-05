@@ -1,6 +1,13 @@
-Erroneous/Wrong constructor name, 
-Describe: constructor is a function called once and used to initialize the contract also usually state variable (e.g., owner address). Where its name is the same name of contract, it can be happened that the developer adds another function with same name which lead to unexpected behavior
-Its danger: Rubixi attack
-Solution: 
-has been eliminated, starting Solidity version 0.4.22, by introducing the new keyword constructor / Use the recent toolchain (Use the recent Solidity compiler version
-Tools can detect:  
+# Erroneous Wrong constructor name
+
+## Describe:
+ constructor is a function called once and used to initialize the contract also usually state variable (e.g., owner address). Where its name is the same name of contract, it can be happened that the developer adds another function with same name which lead to unexpected behavior.  
+
+## Its danger:
+ Rubixi attack.
+
+## Solution: 
+Has been eliminated, starting Solidity version 0.4.22, by introducing the
+ new keyword constructor / Use the recent toolchain (Use the recent Solidity compiler version.
+
+## Tools can detect:  

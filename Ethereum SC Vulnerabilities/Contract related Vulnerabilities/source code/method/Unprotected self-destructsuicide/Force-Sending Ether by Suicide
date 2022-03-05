@@ -1,0 +1,5 @@
+Sample code: 
+function destroySmartContract(address payable add) public {
+        require(msg.sender == owner, "You are not the owner");
+        selfdestruct(add);
+}

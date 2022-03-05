@@ -1,0 +1,22 @@
+Sample code: let's consider a sample contract in Code31a, if add new product and transfer ether to the contract, it will send both name of the product with its price. Notice that, all product are handled by an array of struct products which is stored in slot[0] of storage and address of its supplier at slot[1] which should not change. However unexpectedly the variable product which in-function variable is not stored in memory, instead becomes a pointer to storage because is a complex type. Due to it is not initialized resulting allocated at slot[0] of storage by default, the assignment (product.prodName = name;) will be overriding over products variable, and also supplier will be overridden by the assignment to (product,price = 1;). The attacker can exploit this issue by adding a product with his account address as parameter, then cause a contract to function differently than it is expected.
+contract Uninitialized is Owner{
+    function withdraw() payable public onlyOwner{
+        address to;
+        to.transfer(this.balance)
+    }  }
+Bob calls transfer. As a result, all Ether is sent to the address 0x0 and is lost.
+Recommendation
+Initialize all the variables. If a variable is meant to be initialized to zero, explicitly set it to zero to improve code readability.
+contract UntitialExp {
+        Struct Product {
+         bytes32 prodName;
+        uint price;
+      } 
+Product [] public products;   // slot[0]
+address public supplier;    // slot[1]
+function sell (bytes32 name) public payable {
+   Product product;
+   product.prodName = name;
+  product,price = 1;
+  products.puch(product);
+} }

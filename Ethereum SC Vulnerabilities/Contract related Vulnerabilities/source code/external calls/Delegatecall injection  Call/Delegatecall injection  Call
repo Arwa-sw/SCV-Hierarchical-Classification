@@ -1,4 +1,17 @@
-1.	The example in code9a has two parts: the contract library and the user contract. It allows the user to withdraw twice as his menoy. The user contract uses a delegatecall function with two parameters: funSig, which is a function selector specifying which function in the library contract will be executed, and the parameters of the target function. The library contract has two variables (start, res) that will be stored in the storage as slot[0] and slot[1], and the functions intial(start) and setResult(n) will correspond to them (slot[0], slot[1]) with the input of the user contract (inst) and his result (res) as expected. However, if we trace the flow of the function delegatecall (inst.delegatecall(funSig, counter)), we will figure out that it will call the setResult() function, which should set the result (res) in slot[1], but incorrectly set the inst address in slot[0] which is uint8. That will cause the calc function to give an unexpected result, and hence the withdraw() function will revert as it will not contain uint(inst) amount of ether. Moreover, the user contract allows the users to call all functions of the library contract, thus anyone can modify the storage slot[0] and direct it to address of a malicious contract they created. Then, the malicious contract will run whenever the user calls withdraw() or fallback functions and steal the entire balance of the contract.
+Sample code: The example in code9a has two parts:
+ the contract library and the user contract. 
+ It allows the user to withdraw twice as his menoy.
+  The user contract uses a delegatecall function with two parameters:
+   funSig, which is a function selector specifying which function in the library contract will be
+    executed, and the parameters of the target function. The library contract has two variables
+     (start, res) that will be stored in the storage as slot[0] and slot[1], and the functions
+      intial(start) and setResult(n) will correspond to them (slot[0], slot[1])
+       with the input of the user contract (inst) and his result (res) as expected. However, 
+       if we trace the flow of the function delegatecall (inst.delegatecall(funSig, counter)),
+        we will figure out that it will call the setResult() function, which should set the result
+         (res) in slot[1], but incorrectly set the inst address in slot[0] which is uint8. 
+         That will cause the calc function to give an unexpected result,
+          and hence the withdraw() function will revert as it will not contain uint(inst) amount of ether. Moreover, the user contract allows the users to call all functions of the library contract, thus anyone can modify the storage slot[0] and direct it to address of a malicious contract they created. Then, the malicious contract will run whenever the user calls withdraw() or fallback functions and steal the entire balance of the contract.
 contract LibContract {
     uint public start;
     uint public res;

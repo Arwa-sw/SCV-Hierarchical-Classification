@@ -1,4 +1,3 @@
-
 import "./TokenCreation.sol";
 pragma solidity ^0.4.4;
 contract DAOInterface {
@@ -18,3 +17,5 @@ function withdraw() onlyTokenholders returns (bool _success) {
         return true;
 }
 //…
+}
+Sorce: DAO.sol, https://github.com/blockchainsllc/DAO/blob/develop/DAO.sol

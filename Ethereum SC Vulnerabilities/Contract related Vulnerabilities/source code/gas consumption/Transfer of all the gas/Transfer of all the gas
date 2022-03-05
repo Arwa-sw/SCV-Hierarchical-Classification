@@ -1,0 +1,9 @@
+function sendEther(uint x){
+add.send(x); // bad
+add.call.value(x)(); // bad cuz this is doubly dangerous, as it will forward all remaining gas and doesn't check for result
+add.call.value(x)(bytes4(sha3("deposit()"))); // bad cuz if deposit throws an exception, the raw call() will only return false and transaction will NOT be reverted
+if(!add.send(x)) {  // good
+    // …
+}
+ExtContract(add).deposit.value(x);
+}

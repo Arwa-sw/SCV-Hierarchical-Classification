@@ -1,0 +1,1 @@
+Arbitrary address: due to that EVM cannot check the caller’s identity and when a contract’s funds can be withdrawn by any caller, it may send the ether to an arbitrary address who is neither the owner of the contract nor an investor who deposited funds to the contract.

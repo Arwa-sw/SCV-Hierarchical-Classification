@@ -1,0 +1,5 @@
+Sample code: Functions transfer and transfFrom return a Boolean value
+contract Token{
+    function transfer(address to, uint value) external;
+    //...
+}

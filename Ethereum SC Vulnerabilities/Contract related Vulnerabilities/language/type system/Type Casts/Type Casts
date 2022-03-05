@@ -1,3 +1,5 @@
+Sample code: As shown in the figure below, smart contract wallet references the instance t to call the sub() function in the contract Typecasttest_1. When the function transfer() is running, the parameter assignment of the contract address is changed to Typecasttest_1. However, the solidity compiler will only check whether the contract declares the function sub(), and will not check the consistency of the address parameter and Typecasttest_1's parameters. Assuming that the attacker's contract Typecasttest_2 has the same sub() function, it will be executed by the EVM.
+This kind of loophole is caused by its own flaws in the solidity language's type system, and there is no good way to solve this loophole.
 a:  contract Typecasttest_1{
 function sub(uint a)
 public return (uint) { 

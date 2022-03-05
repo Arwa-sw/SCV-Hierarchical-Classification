@@ -1,3 +1,4 @@
+Sample code: code16a shows that the user can pass any argument which can have an unexpected effect on the contract execution
 contract exp{
 function f1(uint x){
 require(msg.value >0);

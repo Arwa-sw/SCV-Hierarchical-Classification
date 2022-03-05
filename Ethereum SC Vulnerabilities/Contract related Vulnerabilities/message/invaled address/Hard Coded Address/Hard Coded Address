@@ -1,0 +1,7 @@
+Sample code: In the example Code28a the function transfer has two argument addr and tokens,
+  if we wnt to transfer 1000 tokens to address 0xab0but by mistake we write the value of addr is 0xab which will be added 0 by EVM auto , the encoding will be ab0010000 instead of ab0001000, which leads to an increase in the transfer tokens.
+pragma solidity ^0.5.0;
+contract invalidAddExp {
+function hardAddr () {address owner=0xdG…C3AdlD;}
+function transfer are (address addr, uint tokens) {public returns (bool succ)}
+}
