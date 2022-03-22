@@ -16,5 +16,3 @@ Firstly, to have a better understanding of smart contract vulnerabilities, cause
  It can happen because of unanticipated interactions between different components of smart contract applications (DApps): the smart contract itself, the user of the smart contract, the miner, or the blockchain platform. 
 
  On the other hand, the cause is the root of the vulnerability that triggers the vulnerability, where the consequence is its impact.
-
-  We highlighted the vulnerability with red, the cause with orange, and the consequence with purple.
