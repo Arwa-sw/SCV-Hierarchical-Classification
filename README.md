@@ -18,25 +18,3 @@ Firstly, to have a better understanding of smart contract vulnerabilities, cause
  On the other hand, the cause is the root of the vulnerability that triggers the vulnerability, where the consequence is its impact.
 
   We highlighted the vulnerability with red, the cause with orange, and the consequence with purple.
-
-**Based on these definitions, we organized the vulnerabilities into the domains as follows:** 
-
-## Block related Vulnerabilities:
-The vulnerabilities in this domain are the result of using variables such as timestamp, blockhash, number of blocks, or coinbase as a random seed or as a condition check.
-
- There are two known vulnerabilities caused by using these variables:
-
-
-
- <ul>
-<li>Timestamp Dependence</li>
-    </li>
-   
-   <li> Blockhash</li>
-     <ul>
-     <li>Bad Randomness (Entropy Illusion)</li>
-    </ul>
-  </ul>
-
-
-
